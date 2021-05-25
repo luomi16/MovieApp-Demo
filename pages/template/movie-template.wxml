@@ -1,0 +1,19 @@
+<template name="cooks">
+  <!-- wx :for循环创建该标签下方的子节点-->
+  <!--每一次循环都会创建一个item对象保存迭代的值-->
+  <block wx:for="{{array}}">
+    <view class="item" bindtap="" id="0">
+      <image src="{{item.img}}" style="width: 70px;height : 100px;"></image>
+    </view>
+    <view class="desc">
+      <view class="title">{{item.title}}</view>
+      <view class="count">
+        <view class="type">{{item.type}}</view>
+        <view class="liulan">{{item.liulan}}</view>
+        <view class="pinglun">{{item.pinlun}}</view>
+      </view>
+    </view>
+    <!--分割线-->
+    <view class="hr2"></view>
+  </block>
+</template>

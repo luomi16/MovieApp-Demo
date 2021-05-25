@@ -1,0 +1,55 @@
+<!--pages/movie/movie.wxml-->
+<view class="content">
+  <!--橱窗模块-->
+  <view class="img">
+    <image style="width:100%;height:230px;" src="/images/list/movie2.jpg"></image> 
+  </view>
+
+  <!--导航模块-->
+  <view class="nav">
+    <view class="nav-item">
+      <view>
+        <image style="width:25px;height:23px;" src="/images/icon/movie.png"></image> 
+      </view>
+        <view>电影分类</view>
+    </view>
+    <view class="nav-item">
+      <view>
+        <image style="width:25px;height:23px;" src="/images/icon/intro.png"></image> 
+      </view>
+        <view>电影介绍</view>
+    </view>
+    <view class="nav-item">
+      <view>
+        <image style="width:25px;height:23px;" src="/images/icon/movie.png"></image> 
+      </view>
+        <view>演员</view>
+    </view>
+    <view class="nav-item">
+      <view>
+        <image style="width:25px;height:23px;" src="/images/icon/buy.png"></image> 
+      </view>
+        <view>买票</view>
+    </view>
+  </view>
+
+  <!--分割线-->
+  <view class="hr">
+  </view>
+
+  <!--列表头部-->
+  <view class="head">
+  <view>香哈头条</view>
+  <view class="right">闪购</view>
+  </view>
+
+  <!--列表-->
+  <!--引入模版-->
+  <import src="../template/movie-template.wxml"></import>
+  <view class="list">
+    <!--is验证模版的名称-->
+    <!-- data传入数据到模版内部使用-->
+    <block wx:for="{{array}}"></block>
+    <template is="cooks" data="{{array}}"></template>
+  </view>
+</view>
